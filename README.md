@@ -1,6 +1,6 @@
 # 🏦 Banking Customer Creditworthiness Score Prediction
 
-## 📌 Project Overview
+## Project Overview
 
 Banks must decide whether to approve or reject loan applications based on a customer’s ability to repay.  
 Wrong decisions can lead to financial loss or missed business opportunities.
@@ -11,7 +11,7 @@ The system analyzes customer behavior patterns and classifies whether a customer
 
 ---
 
-## 🎯 Objective
+## Objective
 
 - Analyze customer financial and demographic data  
 - Identify patterns linked to loan repayment behavior  
@@ -20,7 +20,52 @@ The system analyzes customer behavior patterns and classifies whether a customer
 
 ---
 
-## 📊 Dataset Information
+## Tools and Technologies Used
+
+### Programming Language
+- **Python** – Used for data preprocessing, feature engineering, modeling, and evaluation.
+
+### Data Handling and Processing
+- **Pandas** – Loading datasets, cleaning missing values, feature creation, and data transformations.
+- **NumPy** – Numerical computations, ratio calculations, and threshold-based evaluations.
+
+### Data Preprocessing & Feature Engineering
+- **Scikit-learn (sklearn)**  
+  - `LabelEncoder` – Encoding categorical variables  
+  - `StandardScaler` – Feature scaling  
+  - `train_test_split` – Stratified train-test split  
+  - `CalibratedClassifierCV` – Probability calibration  
+  - Feature correlation analysis and imbalance handling  
+
+### Machine Learning Models
+- **Logistic Regression** – Baseline credit risk classification model.
+- **Calibrated Logistic Regression** – Improved probability reliability for credit scoring.
+- **LightGBM (Light Gradient Boosting Machine)** – High-performance gradient boosting model for credit default prediction.
+
+### Model Evaluation & Metrics
+- **Scikit-learn Metrics**
+  - ROC-AUC
+  - Precision, Recall, F1-score
+  - Confusion Matrix
+  - Precision-Recall Curve
+- **Threshold Optimization** – Performance analysis across multiple probability cutoffs.
+
+### Model Explainability
+- **SHAP (SHapley Additive Explanations)**  
+  - Global feature importance
+  - Feature contribution analysis
+  - Model interpretability for credit risk decisions
+
+### Visualization
+- **Matplotlib** – ROC curves, Precision-Recall curves, feature importance plots.
+
+### Model Persistence & Deployment Support
+- **Joblib** – Saving trained models, scalers, and calibrated classifiers.
+- **OS** – Directory and file management for deliverables.
+
+---
+
+## Dataset Information
 
 The dataset is stored separately on **Google Drive** due to file size and access convenience.
 
@@ -38,7 +83,7 @@ Each row represents one banking customer with multiple attributes used for risk 
 
 ---
 
-## 🛠️ Project Workflow
+## Project Workflow
 
 ### 1. Data Loading
 - Load dataset from Google Drive  
@@ -70,7 +115,7 @@ Each row represents one banking customer with multiple attributes used for risk 
 
 ---
 
-## 📈 Key Concepts Used
+## Key Concepts Used
 
 - Credit risk analysis  
 - Supervised machine learning classification  
@@ -79,7 +124,7 @@ Each row represents one banking customer with multiple attributes used for risk 
 
 ---
 
-## ✅ Outcome
+## Outcome
 
 The trained model can:
 
@@ -91,7 +136,7 @@ This improves operational efficiency and financial safety for banking institutio
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Add more customer behavioral data  
 - Apply advanced models like XGBoost or Neural Networks  
